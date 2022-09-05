@@ -1,0 +1,7 @@
+username: "your_user_name"
+password: "your_password"
+server: "your_server"
+database: "risk"
+# Use whichever driver is appropriate for your
+# version of Sql Server.
+driver: "ODBC Driver 18 for SQL Server"

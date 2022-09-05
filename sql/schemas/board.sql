@@ -1,0 +1,11 @@
+USE [risk];
+GO
+
+IF NOT EXISTS (
+    SELECT *
+      FROM INFORMATION_SCHEMA.SCHEMATA
+     WHERE SCHEMA_NAME = 'board'
+       AND CATALOG_NAME = 'risk'
+)
+EXEC(N'CREATE SCHEMA [board];');
+GO
