@@ -1,6 +1,6 @@
 # Risky-AI
 
-*Credit to github.com user [ncsereoka](#https://github.com/ncsereoka) - most of the framework for this package was cribbed directly from his repo [risky-game](#https://github.com/ncsereoka/risky-game)*
+*Credit to github.com user [ncsereoka](https://github.com/ncsereoka) - most of the framework for this package was cribbed directly from his repo [risky-game](https://github.com/ncsereoka/risky-game)*
 
 *Risk® is a registered trademark of Hasbro, Inc. This code base is intended for educational or research purposes only. All rights and privileges belong to their respective owners.*
 
