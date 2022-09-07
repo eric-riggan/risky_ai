@@ -6,3 +6,5 @@ SELECT [sg].[atk_strength],
   FROM [sim].[sim_games] sg
  GROUP BY [sg].[atk_strength],
           [sg].[def_strength]
+ ORDER BY [sg].[atk_strength],
+          [sg].[def_strength]

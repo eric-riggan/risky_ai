@@ -1,0 +1,753 @@
+{
+    "boards": [
+        {
+            "board_name": "Original",
+            "continents": [
+                {
+                    "continent_name": "Europe",
+                    "supply_bonus": 5
+                },
+                {
+                    "continent_name": "Australia",
+                    "supply_bonus": 2
+                },
+                {
+                    "continent_name": "Africa",
+                    "supply_bonus": 3
+                },
+                {
+                    "continent_name": "Asia",
+                    "supply_bonus": 7
+                },
+                {
+                    "continent_name": "South America",
+                    "supply_bonus": 2
+                },
+                {
+                    "continent_name": "North America",
+                    "supply_bonus": 5
+                }
+            ],
+            "territories": [
+                {
+                    "continent_name": "Europe",
+                    "territory_name": "Scandinavia"
+                },
+                {
+                    "continent_name": "Europe",
+                    "territory_name": "Northern Europe"
+                },
+                {
+                    "continent_name": "Africa",
+                    "territory_name": "Egypt"
+                },
+                {
+                    "continent_name": "North America",
+                    "territory_name": "Ontario"
+                },
+                {
+                    "continent_name": "Africa",
+                    "territory_name": "East Africa"
+                },
+                {
+                    "continent_name": "Africa",
+                    "territory_name": "South Africa"
+                },
+                {
+                    "continent_name": "Europe",
+                    "territory_name": "Southern Europe"
+                },
+                {
+                    "continent_name": "Asia",
+                    "territory_name": "Japan"
+                },
+                {
+                    "continent_name": "Africa",
+                    "territory_name": "Congo"
+                },
+                {
+                    "continent_name": "Asia",
+                    "territory_name": "Mongolia"
+                },
+                {
+                    "continent_name": "Europe",
+                    "territory_name": "Iceland"
+                },
+                {
+                    "continent_name": "South America",
+                    "territory_name": "Peru"
+                },
+                {
+                    "continent_name": "Asia",
+                    "territory_name": "Siberia"
+                },
+                {
+                    "continent_name": "Europe",
+                    "territory_name": "Great Britain"
+                },
+                {
+                    "continent_name": "North America",
+                    "territory_name": "Alberta"
+                },
+                {
+                    "continent_name": "South America",
+                    "territory_name": "Argentina"
+                },
+                {
+                    "continent_name": "Asia",
+                    "territory_name": "Siam"
+                },
+                {
+                    "continent_name": "Australia",
+                    "territory_name": "Eastern Australia"
+                },
+                {
+                    "continent_name": "Australia",
+                    "territory_name": "Indonesia"
+                },
+                {
+                    "continent_name": "Asia",
+                    "territory_name": "Middle East"
+                },
+                {
+                    "continent_name": "Europe",
+                    "territory_name": "Ukraine"
+                },
+                {
+                    "continent_name": "South America",
+                    "territory_name": "Venezuela"
+                },
+                {
+                    "continent_name": "Australia",
+                    "territory_name": "New Guinea"
+                },
+                {
+                    "continent_name": "North America",
+                    "territory_name": "Eastern US"
+                },
+                {
+                    "continent_name": "North America",
+                    "territory_name": "Alaska"
+                },
+                {
+                    "continent_name": "Asia",
+                    "territory_name": "Yakutsk"
+                },
+                {
+                    "continent_name": "Asia",
+                    "territory_name": "Afghanistan"
+                },
+                {
+                    "continent_name": "Asia",
+                    "territory_name": "China"
+                },
+                {
+                    "continent_name": "Europe",
+                    "territory_name": "Western Europe"
+                },
+                {
+                    "continent_name": "Asia",
+                    "territory_name": "Irkutsk"
+                },
+                {
+                    "continent_name": "Africa",
+                    "territory_name": "North Africa"
+                },
+                {
+                    "continent_name": "South America",
+                    "territory_name": "Brazil"
+                },
+                {
+                    "continent_name": "Asia",
+                    "territory_name": "Ural"
+                },
+                {
+                    "continent_name": "Australia",
+                    "territory_name": "Western Australia"
+                },
+                {
+                    "continent_name": "Asia",
+                    "territory_name": "Kamchatka"
+                },
+                {
+                    "continent_name": "North America",
+                    "territory_name": "Quebec"
+                },
+                {
+                    "continent_name": "North America",
+                    "territory_name": "Northwest Territory"
+                },
+                {
+                    "continent_name": "North America",
+                    "territory_name": "Central America"
+                },
+                {
+                    "continent_name": "North America",
+                    "territory_name": "Greenland"
+                },
+                {
+                    "continent_name": "Africa",
+                    "territory_name": "Madagascar"
+                },
+                {
+                    "continent_name": "Asia",
+                    "territory_name": "India"
+                },
+                {
+                    "continent_name": "North America",
+                    "territory_name": "Western US"
+                }
+            ],
+            "borders": [
+                {
+                    "source_territory_name": "Scandinavia",
+                    "destination_territory_name": "Northern Europe"
+                },
+                {
+                    "source_territory_name": "Scandinavia",
+                    "destination_territory_name": "Iceland"
+                },
+                {
+                    "source_territory_name": "Scandinavia",
+                    "destination_territory_name": "Great Britain"
+                },
+                {
+                    "source_territory_name": "Scandinavia",
+                    "destination_territory_name": "Ukraine"
+                },
+                {
+                    "source_territory_name": "Northern Europe",
+                    "destination_territory_name": "Southern Europe"
+                },
+                {
+                    "source_territory_name": "Northern Europe",
+                    "destination_territory_name": "Great Britain"
+                },
+                {
+                    "source_territory_name": "Northern Europe",
+                    "destination_territory_name": "Ukraine"
+                },
+                {
+                    "source_territory_name": "Egypt",
+                    "destination_territory_name": "East Africa"
+                },
+                {
+                    "source_territory_name": "Ontario",
+                    "destination_territory_name": "Quebec"
+                },
+                {
+                    "source_territory_name": "Ontario",
+                    "destination_territory_name": "Western US"
+                },
+                {
+                    "source_territory_name": "South Africa",
+                    "destination_territory_name": "East Africa"
+                },
+                {
+                    "source_territory_name": "South Africa",
+                    "destination_territory_name": "Madagascar"
+                },
+                {
+                    "source_territory_name": "Southern Europe",
+                    "destination_territory_name": "Egypt"
+                },
+                {
+                    "source_territory_name": "Southern Europe",
+                    "destination_territory_name": "Middle East"
+                },
+                {
+                    "source_territory_name": "Southern Europe",
+                    "destination_territory_name": "Ukraine"
+                },
+                {
+                    "source_territory_name": "Southern Europe",
+                    "destination_territory_name": "North Africa"
+                },
+                {
+                    "source_territory_name": "Japan",
+                    "destination_territory_name": "Mongolia"
+                },
+                {
+                    "source_territory_name": "Congo",
+                    "destination_territory_name": "East Africa"
+                },
+                {
+                    "source_territory_name": "Congo",
+                    "destination_territory_name": "South Africa"
+                },
+                {
+                    "source_territory_name": "Congo",
+                    "destination_territory_name": "North Africa"
+                },
+                {
+                    "source_territory_name": "Mongolia",
+                    "destination_territory_name": "China"
+                },
+                {
+                    "source_territory_name": "Peru",
+                    "destination_territory_name": "Argentina"
+                },
+                {
+                    "source_territory_name": "Siberia",
+                    "destination_territory_name": "Mongolia"
+                },
+                {
+                    "source_territory_name": "Siberia",
+                    "destination_territory_name": "Yakutsk"
+                },
+                {
+                    "source_territory_name": "Siberia",
+                    "destination_territory_name": "China"
+                },
+                {
+                    "source_territory_name": "Siberia",
+                    "destination_territory_name": "Irkutsk"
+                },
+                {
+                    "source_territory_name": "Siberia",
+                    "destination_territory_name": "Ural"
+                },
+                {
+                    "source_territory_name": "Great Britain",
+                    "destination_territory_name": "Iceland"
+                },
+                {
+                    "source_territory_name": "Alberta",
+                    "destination_territory_name": "Ontario"
+                },
+                {
+                    "source_territory_name": "Alberta",
+                    "destination_territory_name": "Western US"
+                },
+                {
+                    "source_territory_name": "Siam",
+                    "destination_territory_name": "Indonesia"
+                },
+                {
+                    "source_territory_name": "Siam",
+                    "destination_territory_name": "China"
+                },
+                {
+                    "source_territory_name": "Siam",
+                    "destination_territory_name": "India"
+                },
+                {
+                    "source_territory_name": "Middle East",
+                    "destination_territory_name": "Egypt"
+                },
+                {
+                    "source_territory_name": "Middle East",
+                    "destination_territory_name": "Southern Europe"
+                },
+                {
+                    "source_territory_name": "Middle East",
+                    "destination_territory_name": "Ukraine"
+                },
+                {
+                    "source_territory_name": "Middle East",
+                    "destination_territory_name": "Afghanistan"
+                },
+                {
+                    "source_territory_name": "Middle East",
+                    "destination_territory_name": "India"
+                },
+                {
+                    "source_territory_name": "Ukraine",
+                    "destination_territory_name": "Afghanistan"
+                },
+                {
+                    "source_territory_name": "Ukraine",
+                    "destination_territory_name": "Ural"
+                },
+                {
+                    "source_territory_name": "Venezuela",
+                    "destination_territory_name": "Peru"
+                },
+                {
+                    "source_territory_name": "Venezuela",
+                    "destination_territory_name": "Brazil"
+                },
+                {
+                    "source_territory_name": "New Guinea",
+                    "destination_territory_name": "Eastern Australia"
+                },
+                {
+                    "source_territory_name": "New Guinea",
+                    "destination_territory_name": "Indonesia"
+                },
+                {
+                    "source_territory_name": "New Guinea",
+                    "destination_territory_name": "Western Australia"
+                },
+                {
+                    "source_territory_name": "Eastern US",
+                    "destination_territory_name": "Ontario"
+                },
+                {
+                    "source_territory_name": "Eastern US",
+                    "destination_territory_name": "Quebec"
+                },
+                {
+                    "source_territory_name": "Eastern US",
+                    "destination_territory_name": "Central America"
+                },
+                {
+                    "source_territory_name": "Eastern US",
+                    "destination_territory_name": "Western US"
+                },
+                {
+                    "source_territory_name": "Alaska",
+                    "destination_territory_name": "Alberta"
+                },
+                {
+                    "source_territory_name": "Alaska",
+                    "destination_territory_name": "Kamchatka"
+                },
+                {
+                    "source_territory_name": "Alaska",
+                    "destination_territory_name": "Northwest Territory"
+                },
+                {
+                    "source_territory_name": "Yakutsk",
+                    "destination_territory_name": "Irkutsk"
+                },
+                {
+                    "source_territory_name": "Yakutsk",
+                    "destination_territory_name": "Kamchatka"
+                },
+                {
+                    "source_territory_name": "Afghanistan",
+                    "destination_territory_name": "Ukraine"
+                },
+                {
+                    "source_territory_name": "Afghanistan",
+                    "destination_territory_name": "China"
+                },
+                {
+                    "source_territory_name": "Afghanistan",
+                    "destination_territory_name": "Ural"
+                },
+                {
+                    "source_territory_name": "Afghanistan",
+                    "destination_territory_name": "India"
+                },
+                {
+                    "source_territory_name": "Western Europe",
+                    "destination_territory_name": "Northern Europe"
+                },
+                {
+                    "source_territory_name": "Western Europe",
+                    "destination_territory_name": "Southern Europe"
+                },
+                {
+                    "source_territory_name": "Western Europe",
+                    "destination_territory_name": "Great Britain"
+                },
+                {
+                    "source_territory_name": "Western Europe",
+                    "destination_territory_name": "North Africa"
+                },
+                {
+                    "source_territory_name": "Irkutsk",
+                    "destination_territory_name": "Mongolia"
+                },
+                {
+                    "source_territory_name": "Irkutsk",
+                    "destination_territory_name": "Kamchatka"
+                },
+                {
+                    "source_territory_name": "North Africa",
+                    "destination_territory_name": "Egypt"
+                },
+                {
+                    "source_territory_name": "North Africa",
+                    "destination_territory_name": "East Africa"
+                },
+                {
+                    "source_territory_name": "Brazil",
+                    "destination_territory_name": "Peru"
+                },
+                {
+                    "source_territory_name": "Brazil",
+                    "destination_territory_name": "Argentina"
+                },
+                {
+                    "source_territory_name": "Brazil",
+                    "destination_territory_name": "North Africa"
+                },
+                {
+                    "source_territory_name": "Ural",
+                    "destination_territory_name": "China"
+                },
+                {
+                    "source_territory_name": "Western Australia",
+                    "destination_territory_name": "Eastern Australia"
+                },
+                {
+                    "source_territory_name": "Western Australia",
+                    "destination_territory_name": "Indonesia"
+                },
+                {
+                    "source_territory_name": "Kamchatka",
+                    "destination_territory_name": "Japan"
+                },
+                {
+                    "source_territory_name": "Kamchatka",
+                    "destination_territory_name": "Mongolia"
+                },
+                {
+                    "source_territory_name": "Northwest Territory",
+                    "destination_territory_name": "Ontario"
+                },
+                {
+                    "source_territory_name": "Northwest Territory",
+                    "destination_territory_name": "Alberta"
+                },
+                {
+                    "source_territory_name": "Northwest Territory",
+                    "destination_territory_name": "Greenland"
+                },
+                {
+                    "source_territory_name": "Central America",
+                    "destination_territory_name": "Venezuela"
+                },
+                {
+                    "source_territory_name": "Central America",
+                    "destination_territory_name": "Western US"
+                },
+                {
+                    "source_territory_name": "Greenland",
+                    "destination_territory_name": "Ontario"
+                },
+                {
+                    "source_territory_name": "Greenland",
+                    "destination_territory_name": "Iceland"
+                },
+                {
+                    "source_territory_name": "Greenland",
+                    "destination_territory_name": "Quebec"
+                },
+                {
+                    "source_territory_name": "Madagascar",
+                    "destination_territory_name": "East Africa"
+                },
+                {
+                    "source_territory_name": "India",
+                    "destination_territory_name": "China"
+                }
+            ],
+            "cards": [
+                {
+                    "territory_name": "Brazil",
+                    "armies": 10,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Egypt",
+                    "armies": 1,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Northern Europe",
+                    "armies": 10,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Japan",
+                    "armies": 10,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Madagascar",
+                    "armies": 5,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Indonesia",
+                    "armies": 10,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Venezuela",
+                    "armies": 1,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Yakutsk",
+                    "armies": 5,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Siam",
+                    "armies": 1,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Western US",
+                    "armies": 10,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Ontario",
+                    "armies": 5,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "North Africa",
+                    "armies": 5,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Great Britain",
+                    "armies": 10,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Mongolia",
+                    "armies": 1,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Eastern US",
+                    "armies": 10,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Congo",
+                    "armies": 1,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Western Australia",
+                    "armies": 10,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Scandinavia",
+                    "armies": 5,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Irkutsk",
+                    "armies": 5,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Ural",
+                    "armies": 5,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Kamchatka",
+                    "armies": 1,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Western Europe",
+                    "armies": 10,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Middle East",
+                    "armies": 1,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Siberia",
+                    "armies": 5,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Greenland",
+                    "armies": 5,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "China",
+                    "armies": 1,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Peru",
+                    "armies": 1,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Quebec",
+                    "armies": 5,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Ukraine",
+                    "armies": 5,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Afghanistan",
+                    "armies": 5,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Iceland",
+                    "armies": 1,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Southern Europe",
+                    "armies": 10,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "India",
+                    "armies": 5,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Argentina",
+                    "armies": 1,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Central America",
+                    "armies": 10,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "South Africa",
+                    "armies": 10,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Northwest Territory",
+                    "armies": 10,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Eastern Australia",
+                    "armies": 10,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "East Africa",
+                    "armies": 1,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Alberta",
+                    "armies": 5,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "Alaska",
+                    "armies": 1,
+                    "card_type": "territory"
+                },
+                {
+                    "territory_name": "New Guinea",
+                    "armies": 1,
+                    "card_type": "territory"
+                }
+            ]
+        }
+    ]
+}

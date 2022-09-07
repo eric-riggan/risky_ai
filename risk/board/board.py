@@ -2,7 +2,7 @@
 import pyodbc
 import pandas as pd
 import networkx as nx
-
+import yaml
 # Import Classes
 from risk.board.border import Border
 from risk.board.territory import Territory
@@ -115,6 +115,78 @@ class Board:
             continents=continents,
             name=board_name
         )
+
+    @staticmethod
+    def from_yaml(file_name, board_name):
+        with open(file_name, 'r', encoding='utf-8') as stream:
+            config = yaml.safe_load(stream)
+            for board in config['boards']:
+                if board['board_name'] == board_name:
+                    territories_df = pd.DataFrame.from_dict(
+                        data=board['territories']
+                    )
+                    continents_df = pd.DataFrame.from_dict(
+                        data=board['continents']
+                    )
+                    borders_df = pd.DataFrame.from_dict(
+                        data=board['borders']
+                    )
+            G = nx.Graph()
+            territories = {}
+            continents = {}
+            border_list = []
+            for row in continents_df.itertuples():
+                continent_name = row.continent_name
+                supply_bonus = row.supply_bonus
+                new_continent = Continent(
+                    name=continent_name,
+                    territories=[],
+                    supply_bonus=supply_bonus
+                )
+                continents[continent_name] = new_continent
+                for territory in territories_df[
+                        territories_df['continent_name'] == continent_name
+                    ].itertuples():
+                    name = territory.territory_name
+                    new_territory = Territory(
+                        name=name
+                    )
+                    continents[continent_name].add_territory(new_territory)
+                    territories[name] = new_territory
+                    G.add_node(
+                        new_territory,
+                        label=name,
+                        title=name,
+                        group=continent_name
+                    )
+    
+            border_set = list(borders_df.itertuples(index=False, name=None))
+            border_set = set(tuple(frozenset(sub)) for sub in set(border_set))
+    
+            for u, v in border_set:
+                source_territory_name = u
+                source_territory = territories[source_territory_name]
+                destination_territory_name = v
+                destination_territory = territories[destination_territory_name]
+                G.add_edge(source_territory, destination_territory, penwidth=5)
+    
+            for node in G.nodes():
+                source_territory = territories[node.name]
+                for neighbor in G.neighbors(node):
+                    destination_territory = territories[neighbor.name]
+                    border = Border(
+                        source_territory=source_territory,
+                        destination_territory=destination_territory
+                    )
+                    source_territory.add_neighbor(destination_territory)
+                    border_list.append(border)
+            return Board(
+                territories=territories,
+                borders=border_list,
+                continents=continents,
+                name=board_name
+            )
+
     def owned_territories(self, player):
         owned_territories = []
         for territory_name in self.territories:
@@ -147,6 +219,3 @@ class Board:
             if terr.can_be_attack_source():
                 legal_attacks.append(terr)
         return legal_attacks
-    
-
-
