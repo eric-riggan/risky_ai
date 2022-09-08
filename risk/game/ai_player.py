@@ -1,7 +1,7 @@
 from risk.game.game import Game
 from risk.utils.game_exceptions import *
 
-class Player:
+class AIPlayer:
     verbose: bool
     def __init__(self, name, agent, verbose=None):
         self.name = name
@@ -22,20 +22,25 @@ class Player:
                 terr_list.append(v)
         return terr_list
 
-    def reinforce_owned_territory(self, state):
-        valid_response = False
-        while valid_response is False:
-            try:
-                territory = self.agent.reinforce_owned_territory(state)
-                if territory.owner == self:
-                    valid_response = True
-                    territory.modify_strength(1)
-                    state.update_nbsr()
-                else:
-                    raise TerritoryNotOwnedByPlayerException()
-            except TerritoryNotOwnedByPlayerException:
-                if self.verbose is True:
-                    print(f"You don't own {territory}. Try again.")
+    def reinforce_owned_territory(self, state, unit_pool):
+        units = unit_pool
+        while units > 0:
+            valid_response = False
+            while valid_response is False:
+                try:
+                    territory = self.agent.reinforce_owned_territory(state)
+                    if territory.owner == self:
+                        valid_response = True
+                        territory.modify_strength(1)
+                        state.update_nbsr()
+                        units -= 1
+                    else:
+                        raise TerritoryNotOwnedByPlayerException()
+                except TerritoryNotOwnedByPlayerException:
+                    if self.verbose is True:
+                        print(f"You don't own {territory}. Try again.")
+        self.unit_pool = 0
+
 
     def reinforce_neutral_territory(self, state):
         territory = self.agent.reinforce_neutral_territory(state)
@@ -65,8 +70,8 @@ class Player:
         while self.unit_pool > 0:
             if self.verbose is True:
                 print(f'{self.name} has {self.unit_pool} units to place.')
-            self.reinforce_owned_territory(state)
-            self.unit_pool -= 1
+            self.reinforce_owned_territory(state, self.unit_pool)
+            # self.unit_pool -= 1
     
     def wants_to_attack(self, state):
         return self.agent.wants_to_attack(state)
@@ -139,37 +144,3 @@ class Player:
         while source_terrs and self.wants_to_attack(state):
             self.attack(state)
             source_terrs = state.board.legal_attacks(self)
-
-class NaivePlayer(Player):
-    verbose: bool
-    def __init__(self, name, agent, verbose=None):
-        super().__init__(name, agent, verbose)
-    
-    def __str__(self):
-        return super().__str__()
-    
-    def list_owned_territories(self, state):
-        terr_list = []
-        for k, v in state.board.territories.items():
-            if v.owner == self:
-                terr_list.append(v)
-        return terr_list
-    
-    def reinforce_owned_territory(self, state):
-        while self.unit_pool > 0:
-            valid_terrs = []
-            terrs = state.board.owned_territories(self)
-            for terr in terrs:
-                if len(terr.enemy_neighbors()) > 0:
-                    valid_terrs.append(terr)
-            for terr in valid_terrs:
-                print(terr.name)
-                terr.modify_strength(1)
-                state.update_nbsr()
-                self.unit_pool -= 1
-   
-    def place_units(self, state):
-        if self.unit_pool > 0:
-            if self.verbose is True:
-                print(f'{self.name} has {self.unit_pool} units to place.')
-                self.reinforce_owned_territory(state)

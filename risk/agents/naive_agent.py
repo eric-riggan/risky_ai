@@ -45,12 +45,24 @@ class NaiveAgent():
     
     def select_attack_count(self, state, source):
         # print('select_attack_count')
-        units = min(max(source.strength - 1, 1), 3)
+        max_units = min(source.strength - 1, 3)
+        units = self.randomizer.integers(
+            low=1,
+            high=max_units,
+            size=1,
+            endpoint=True
+        ).tolist()[0]
         return units
     
     def defend_territory(self, state, attacked_territory):
         # print('defend')
-        units = min(attacked_territory.strength, 2)
+        high = min(attacked_territory.strength, 2)
+        units = self.randomizer.integers(
+            low=1,
+            high=high,
+            endpoint=True,
+            size=1
+        ).tolist()[0]
         return units
     
     def occupy(self, source, target, unit_count):
